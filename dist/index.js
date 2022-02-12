@@ -3164,6 +3164,7 @@ Promise.all([
 ]).then(() => {
     console.info('Sitemap submitted successfully');
 }).catch((reason) => {
+    console.error(reason);
     core.setFailed(reason.message);
 });
 

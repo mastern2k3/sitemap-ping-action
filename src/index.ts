@@ -15,5 +15,6 @@ Promise.all([
     (new Bing()).ping(sitemapUrl),
 ]).then(() => {
     console.info('Sitemap submitted successfully')
+}).catch((reason) => {
+    core.setFailed(reason.message);
 });
-
